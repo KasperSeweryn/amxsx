@@ -10,13 +10,14 @@ options:
     kill_money: 100
     death_money: 125
     
-    gun_glock.fullname: "&6&lGlock18"
-    gun_glock.maxammo: 120
-    gun_glock.clipammo: 12
-    gun_glock.recoil: 0.1
-    gun_glock.damage: 1
-    gun_glock.delay: 1 second
-    gun_glock.item: wooden shovel
+    gun_glock.fullname: "&6&lGlock18"   # Full name of gun
+    gun_glock.maxammo: 120              # Max ammo of gun
+    gun_glock.clipammo: 12              # Ammo in 1 clip
+    gun_glock.recoil: 0.1               # Recoil of gun
+    gun_glock.damage: 1                 # Damage of gun
+    gun_glock.delay: 1 second           # Delay of bullets
+    gun_glock.item: wooden shovel       # Item texture
+    gun_glock.speed: 3                  # Bullets speed
     
     
     
@@ -27,6 +28,7 @@ options:
     gun_usp.damage: 1
     gun_usp.delay: 1 second
     gun_usp.item: stone shovel
+    gun_usp.speed: 3
     
     
     
@@ -38,6 +40,7 @@ options:
     gun_deagle.damage: 4.5
     gun_deagle.delay: 1.2 second
     gun_deagle.item: diamond shovel
+    gun_deagle.speed: 4
     
     
     gun_p228.fullname: "&6&lSIG P228"
@@ -48,6 +51,7 @@ options:
     gun_p228.damage: 1.5
     gun_p228.delay: 0.5 second
     gun_p228.item: gold shovel
+    gun_p228.speed: 5
     
     
     
@@ -59,6 +63,7 @@ options:
     gun_five-seven.damage: 1.5
     gun_five-seven.delay: 0.3 second
     gun_five-seven.item: iron shovel
+    gun_five-seven.speed: 5
     
     
     
@@ -70,6 +75,7 @@ options:
     gun_m3.damage: 4
     gun_m3.delay: 2 seconds
     gun_m3.item: diamond pickaxe
+    gun_m3.speed: 4
     
     
     
@@ -81,6 +87,7 @@ options:
     gun_xm1014.damage: 3
     gun_xm1014.delay: 5 ticks
     gun_xm1014.item: stone pickaxe
+    gun_xm1014.speed: 3
     
     
     
@@ -92,6 +99,7 @@ options:
     gun_mp5.damage: 2
     gun_mp5.delay: 2 ticks
     gun_mp5.item: fishing rod
+    gun_mp5.speed: 6
     
     
     
@@ -103,6 +111,7 @@ options:
     gun_tmp.damage: 2
     gun_tmp.delay: 2 ticks
     gun_tmp.item: blaze powder
+    gun_tmp.speed: 6
     
     
     
@@ -114,6 +123,7 @@ options:
     gun_p90.damage: 3.5
     gun_p90.delay: 2 ticks
     gun_p90.item: carrot on a stick
+    gun_p90.speed: 7
     
     
     
@@ -125,6 +135,7 @@ options:
     gun_mac10.damage: 1
     gun_mac10.delay: 1 tick
     gun_mac10.item: feather
+    gun_mac10.speed: 5
     
     
     
@@ -136,6 +147,7 @@ options:
     gun_ump.damage: 1
     gun_ump.delay: 1 tick
     gun_ump.item: blaze rod
+    gun_ump.speed: 5
     
     
     
@@ -147,6 +159,7 @@ options:
     gun_ak47.damage: 3
     gun_ak47.delay: 2 tick
     gun_ak47.item: iron hoe
+    gun_ak47.speed: 6
     
     
     
@@ -158,6 +171,7 @@ options:
     gun_m4a1.damage: 3
     gun_m4a1.delay: 1.5 ticks
     gun_m4a1.item: wooden hoe
+    gun_m4a1.speed: 6
     
     
     
@@ -167,8 +181,9 @@ options:
     gun_sg552.clipammo: 30
     gun_sg552.recoil: 0.3
     gun_sg552.damage: 6
-    gun_sg552.delay: 2 ticks
+    gun_sg552.delay: 7 ticks
     gun_sg552.item: stone axe
+    gun_sg552.speed: 8                    #Sniper, should be 8
     
     
     
@@ -180,6 +195,7 @@ options:
     gun_aug.damage: 3
     gun_aug.delay: 3 ticks
     gun_aug.item: iron ingot
+    gun_aug.speed: 8
     
     
     
@@ -191,6 +207,7 @@ options:
     gun_famas.damage: 4
     gun_famas.delay: 3 ticks
     gun_famas.item: diamond hoe
+    gun_famas.speed: 9
     
     
     
@@ -202,6 +219,7 @@ options:
     gun_galil.damage: 2
     gun_galil.delay: 4 ticks
     gun_galil.item: stone hoe
+    gun_galil.speed: 6
     
     
     
@@ -213,6 +231,7 @@ options:
     gun_scout.damage: 6
     gun_scout.delay: 2 seconds
     gun_scout.item: iron axe
+    gun_scout.speed: 8                    #Sniper, should be 8
     
     
     
@@ -224,6 +243,7 @@ options:
     gun_awp.damage: 9
     gun_awp.delay: 1.5 seconds
     gun_awp.item: wooden axe
+    gun_awp.speed: 8                    #Sniper, should be 8
     
     
     
@@ -235,6 +255,7 @@ options:
     gun_g3sg1.damage: 4
     gun_g3sg1.delay: 2 seconds
     gun_g3sg1.item: diamond axe
+    gun_g3sg1.speed: 8                #Sniper, should be 8
     
     
     
@@ -246,6 +267,7 @@ options:
     gun_sg550.damage: 4.5
     gun_sg550.delay: 2 seconds
     gun_sg550.item: paper
+    gun_sg550.speed: 8              #Sniper, should be 8
     
     
     
@@ -257,6 +279,7 @@ options:
     gun_m249.damage: 2
     gun_m249.delay: 0.5 ticks
     gun_m249.item: diamond
+    gun_m249.speed: 12
     
     
     
@@ -268,6 +291,7 @@ options:
     gun_he.damage: 4
     gun_he.delay: 5 seconds
     gun_he.item: magma cream
+    gun_he.speed: 2                #Granade, should be 2
     
     
     
@@ -279,6 +303,7 @@ options:
     gun_flash.damage: 0
     gun_flash.delay: 5 seconds
     gun_flash.item: gunpowder
+    gun_flash.speed: 2            #Granade, should be 2
     
     
     
@@ -290,6 +315,7 @@ options:
     gun_smoke.damage: 0
     gun_smoke.delay: 5 seconds
     gun_smoke.item: slimeball
+    gun_smoke.speed: 2           #Granade, should be 2
     
     
     
@@ -301,6 +327,7 @@ options:
     gun_k&h.damage: 0
     gun_k&h.delay: 0 seconds
     gun_k&h.item: diamond chestplate
+    gun_k&h.speed: 0
     
     
     
@@ -312,10 +339,11 @@ options:
     gun_helmet.damage: 0
     gun_helmet.delay: 0 seconds
     gun_helmet.item: diamond legs
+    gun_helmet.speed: 0
     
     
     
-    gun_nightvision.fullname: "&6&lNightVision"
+    gun_nightvision.fullname: "&6&lNightVision Goggles"
     gun_nightvision.cost: 100
     gun_nightvision.maxammo: 1
     gun_nightvision.clipammo: 1
@@ -323,6 +351,7 @@ options:
     gun_nightvision.damage: 0
     gun_nightvision.delay: 1 second
     gun_nightvision.item: iron helmet
+    gun_nightvision.speed: 0
     
     
     
@@ -334,6 +363,7 @@ options:
     gun_def.damage: 0
     gun_def.delay: 0 seconds
     gun_def.item: name tag
+    gun_def.speed: 0
     
     
     
@@ -575,6 +605,36 @@ on script load:
     set {gun_k&h.item} to {@gun_k&h.item}
     set {gun_nightvision.item} to {@gun_nightvision.item}
     set {gun_def.item} to {@gun_def.item}
+
+    set {gun_glock.speed} to {@gun_glock.speed}
+    set {gun_usp.speed} to {@gun_usp.speed}
+    set {gun_deagle.speed} to {@gun_deagle.speed}
+    set {gun_p228.speed} to {@gun_p228.speed}
+    set {gun_five-seven.speed} to {@gun_five-seven.speed}
+    set {gun_m3.speed} to {@gun_m3.speed}
+    set {gun_xm1014.speed} to {@gun_xm1014.speed}
+    set {gun_mp5.speed} to {@gun_mp5.speed}
+    set {gun_tmp.speed} to {@gun_tmp.speed}
+    set {gun_p90.speed} to {@gun_p90.speed}
+    set {gun_mac10.speed} to {@gun_mac10.speed}
+    set {gun_ump.speed} to {@gun_ump.speed}
+    set {gun_ak47.speed} to {@gun_ak47.speed}
+    set {gun_m4a1.speed} to {@gun_m4a1.speed}
+    set {gun_sg552.speed} to {@gun_sg552.speed}
+    set {gun_aug.speed} to {@gun_aug.speed}
+    set {gun_famas.speed} to {@gun_famas.speed}
+    set {gun_galil.speed} to {@gun_galil.speed}
+    set {gun_scout.speed} to {@gun_scout.speed}
+    set {gun_awp.speed} to {@gun_awp.speed}
+    set {gun_sg550.speed} to {@gun_sg550.speed}
+    set {gun_m249.speed} to {@gun_m249.speed}
+    set {gun_he.speed} to {@gun_he.speed}
+    set {gun_flash.speed} to {@gun_flash.speed}
+    set {gun_smoke.speed} to {@gun_smoke.speed}
+    set {gun_helmet.speed} to {@gun_helmet.speed}
+    set {gun_k&h.speed} to {@gun_k&h.speed}
+    set {gun_nightvision.speed} to {@gun_nightvision.speed}
+    set {gun_def.speed} to {@gun_def.speed}
 
 
 on join:
@@ -1313,7 +1373,7 @@ command /gun [<text>] [<text>] [<player>]:    #gun choose %gun%; gun buy %gun%;
                             set {gun.%player%} to arg 2 
                             set {canshooot.%player%} to false
                             set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
-                            make arg player shoot an snowball with speed 3
+                            make arg player shoot an snowball with speed {gun_%arg 2%.speed}
                             remove 1 from {gun_%arg 2%.ammo.%player%}
                             if {gun_%arg 2%.ammo.%player%} is -1:
                                 set the name of the player's tool to "&f&l-&9RELOADING&f&l-"
