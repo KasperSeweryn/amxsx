@@ -1,0 +1,1403 @@
+options:
+    explode_seconds: 30
+    gunshot_sound: "GHAST_FIREBALL"
+    team.ct: &9&l
+    team.tt: &c&l
+    team.spectate: &7
+    
+    starting_money: 800
+    max_money: 16000
+    kill_money: 100
+    death_money: 125
+    
+    gun_glock.fullname: "&6&lGlock18"
+    gun_glock.maxammo: 120
+    gun_glock.clipammo: 12
+    gun_glock.recoil: 0.1
+    gun_glock.damage: 1
+    gun_glock.delay: 1 second
+    gun_glock.item: wooden shovel
+    
+    
+    
+    gun_usp.fullname: "&6&lHeckler&&lKoch USP .45"
+    gun_usp.maxammo: 100
+    gun_usp.clipammo: 12
+    gun_usp.recoil: 0.1
+    gun_usp.damage: 1
+    gun_usp.delay: 1 second
+    gun_usp.item: stone shovel
+    
+    
+    
+    gun_deagle.fullname: "&6&lDesert Eagle"
+    gun_deagle.cost: 650
+    gun_deagle.maxammo: 35
+    gun_deagle.clipammo: 7
+    gun_deagle.recoil: 0.2
+    gun_deagle.damage: 4.5
+    gun_deagle.delay: 1.2 second
+    gun_deagle.item: diamond shovel
+    
+    
+    gun_p228.fullname: "&6&lSIG P228"
+    gun_p228.cost: 600
+    gun_p228.maxammo: 52
+    gun_p228.clipammo: 13
+    gun_p228.recoil: 0.1
+    gun_p228.damage: 1.5
+    gun_p228.delay: 0.5 second
+    gun_p228.item: gold shovel
+    
+    
+    
+    gun_five-seven.fullname: "&6&lFabrique nationale Five - Seven"
+    gun_five-seven.cost: 750
+    gun_five-seven.maxammo: 100
+    gun_five-seven.clipammo: 20
+    gun_five-seven.recoil: 0.1
+    gun_five-seven.damage: 1.5
+    gun_five-seven.delay: 0.3 second
+    gun_five-seven.item: iron shovel
+    
+    
+    
+    gun_m3.fullname: "&6&lBanelli M3 Super 90"
+    gun_m3.cost: 1700
+    gun_m3.maxammo: 32
+    gun_m3.clipammo: 8
+    gun_m3.recoil: 0.2
+    gun_m3.damage: 4
+    gun_m3.delay: 2 seconds
+    gun_m3.item: diamond pickaxe
+    
+    
+    
+    gun_xm1014.fullname: "&6&lBanelli XM1014"
+    gun_xm1014.cost: 3000
+    gun_xm1014.maxammo: 32
+    gun_xm1014.clipammo: 7
+    gun_xm1014.recoil: 0.2
+    gun_xm1014.damage: 3
+    gun_xm1014.delay: 5 ticks
+    gun_xm1014.item: stone pickaxe
+    
+    
+    
+    gun_mp5.fullname: "&6&lH&&lK MP5 Navy"
+    gun_mp5.cost: 1500
+    gun_mp5.maxammo: 120
+    gun_mp5.clipammo: 30
+    gun_mp5.recoil: 0.1
+    gun_mp5.damage: 2
+    gun_mp5.delay: 2 ticks
+    gun_mp5.item: fishing rod
+    
+    
+    
+    gun_tmp.fullname: "&6&lSteyr TMP"
+    gun_tmp.cost: 1250
+    gun_tmp.maxammo: 120
+    gun_tmp.clipammo: 30
+    gun_tmp.recoil: 0.2
+    gun_tmp.damage: 2
+    gun_tmp.delay: 2 ticks
+    gun_tmp.item: blaze powder
+    
+    
+    
+    gun_p90.fullname: "&6&lFN P90"
+    gun_p90.cost: 2350
+    gun_p90.maxammo: 100
+    gun_p90.clipammo: 50
+    gun_p90.recoil: 0.3
+    gun_p90.damage: 3.5
+    gun_p90.delay: 2 ticks
+    gun_p90.item: carrot on a stick
+    
+    
+    
+    gun_mac10.fullname: "&6&lIngram MAC-10"
+    gun_mac10.cost: 1400
+    gun_mac10.maxammo: 120
+    gun_mac10.clipammo: 30
+    gun_mac10.recoil: 0
+    gun_mac10.damage: 1
+    gun_mac10.delay: 1 tick
+    gun_mac10.item: feather
+    
+    
+    
+    gun_ump.fullname: "&6&lH&&lK UMP45"
+    gun_ump.cost: 1700
+    gun_ump.maxammo: 100
+    gun_ump.clipammo: 25
+    gun_ump.recoil: 0
+    gun_ump.damage: 1
+    gun_ump.delay: 1 tick
+    gun_ump.item: blaze rod
+    
+    
+    
+    gun_ak47.fullname: "&6&lAK-47"
+    gun_ak47.cost: 2500
+    gun_ak47.maxammo: 90
+    gun_ak47.clipammo: 30
+    gun_ak47.recoil: 0.5
+    gun_ak47.damage: 3
+    gun_ak47.delay: 2 tick
+    gun_ak47.item: iron hoe
+    
+    
+    
+    gun_m4a1.fullname: "&6&lColt M4A1 Carabine"
+    gun_m4a1.cost: 3100
+    gun_m4a1.maxammo: 90
+    gun_m4a1.clipammo: 30
+    gun_m4a1.recoil: 0.4
+    gun_m4a1.damage: 3
+    gun_m4a1.delay: 1.5 ticks
+    gun_m4a1.item: wooden hoe
+    
+    
+    
+    gun_sg552.fullname: "&6&lSIG SG-552"
+    gun_sg552.cost: 3500
+    gun_sg552.maxammo: 90
+    gun_sg552.clipammo: 30
+    gun_sg552.recoil: 0.3
+    gun_sg552.damage: 6
+    gun_sg552.delay: 2 ticks
+    gun_sg552.item: stone axe
+    
+    
+    
+    gun_aug.fullname: "&6&lSteyr AUG"
+    gun_aug.cost: 3500
+    gun_aug.maxammo: 90
+    gun_aug.clipammo: 30
+    gun_aug.recoil: 0.3
+    gun_aug.damage: 3
+    gun_aug.delay: 3 ticks
+    gun_aug.item: iron ingot
+    
+    
+    
+    gun_famas.fullname: "&6&lGiat FAMAS F1"
+    gun_famas.cost: 2250
+    gun_famas.maxammo: 90
+    gun_famas.clipammo: 25
+    gun_famas.recoil: 0.4
+    gun_famas.damage: 4
+    gun_famas.delay: 3 ticks
+    gun_famas.item: diamond hoe
+    
+    
+    
+    gun_galil.fullname: "&6&lIMI Galil Ar"
+    gun_galil.cost: 2000
+    gun_galil.maxammo: 90
+    gun_galil.clipammo: 35
+    gun_galil.recoil: 0.3
+    gun_galil.damage: 2
+    gun_galil.delay: 4 ticks
+    gun_galil.item: stone hoe
+    
+    
+    
+    gun_scout.fullname: "&6&lSteyr Scout"
+    gun_scout.cost: 2750
+    gun_scout.maxammo: 90
+    gun_scout.clipammo: 10
+    gun_scout.recoil: 0.6
+    gun_scout.damage: 6
+    gun_scout.delay: 2 seconds
+    gun_scout.item: iron axe
+    
+    
+    
+    gun_awp.fullname: "&6&lArctic Warfare Police"
+    gun_awp.cost: 4750
+    gun_awp.maxammo: 30
+    gun_awp.clipammo: 10
+    gun_awp.recoil: 1.2
+    gun_awp.damage: 9
+    gun_awp.delay: 1.5 seconds
+    gun_awp.item: wooden axe
+    
+    
+    
+    gun_g3sg1.fullname: "&6&lH&&lK G3/SG-1"
+    gun_g3sg1.cost: 5000
+    gun_g3sg1.maxammo: 60
+    gun_g3sg1.clipammo: 20
+    gun_g3sg1.recoil: 0.5
+    gun_g3sg1.damage: 4
+    gun_g3sg1.delay: 2 seconds
+    gun_g3sg1.item: diamond axe
+    
+    
+    
+    gun_sg550.fullname: "&6&lSIG SG-550 Commando"
+    gun_sg550.cost: 4200
+    gun_sg550.maxammo: 90
+    gun_sg550.clipammo: 30
+    gun_sg550.recoil: 0.5
+    gun_sg550.damage: 4.5
+    gun_sg550.delay: 2 seconds
+    gun_sg550.item: paper
+    
+    
+    
+    gun_m249.fullname: "&6&lFN M249 Para"
+    gun_m249.cost: 5750
+    gun_m249.maxammo: 200
+    gun_m249.clipammo: 100
+    gun_m249.recoil: 0.3
+    gun_m249.damage: 2
+    gun_m249.delay: 0.5 ticks
+    gun_m249.item: diamond
+    
+    
+    
+    gun_he.fullname: "&6&lHE Granade"
+    gun_he.cost: 300
+    gun_he.maxammo: 1
+    gun_he.clipammo: 1
+    gun_he.recoil: 0
+    gun_he.damage: 4
+    gun_he.delay: 5 seconds
+    gun_he.item: magma cream
+    
+    
+    
+    gun_flash.fullname: "&6&lFlashbang"
+    gun_flash.cost: 200
+    gun_flash.maxammo: 2
+    gun_flash.clipammo: 1
+    gun_flash.recoil: 0
+    gun_flash.damage: 0
+    gun_flash.delay: 5 seconds
+    gun_flash.item: gunpowder
+    
+    
+    
+    gun_smoke.fullname: "&6&lSmoke Granade"
+    gun_smoke.cost: 300
+    gun_smoke.maxammo: 1
+    gun_smoke.clipammo: 1
+    gun_smoke.recoil: 0
+    gun_smoke.damage: 0
+    gun_smoke.delay: 5 seconds
+    gun_smoke.item: slimeball
+    
+    
+    
+    gun_k&h.fullname: "&6&lKevlar & Helmet"
+    gun_k&h.cost: 1000
+    gun_k&h.maxammo: 1
+    gun_k&h.clipammo: 1
+    gun_k&h.recoil: 0
+    gun_k&h.damage: 0
+    gun_k&h.delay: 0 seconds
+    gun_k&h.item: diamond chestplate
+    
+    
+    
+    gun_helmet.fullname: "&6&lHelmet"
+    gun_helmet.cost: 350
+    gun_helmet.maxammo: 1
+    gun_helmet.clipammo: 1
+    gun_helmet.recoil: 0
+    gun_helmet.damage: 0
+    gun_helmet.delay: 0 seconds
+    gun_helmet.item: diamond legs
+    
+    
+    
+    gun_nightvision.fullname: "&6&lNightVision"
+    gun_nightvision.cost: 100
+    gun_nightvision.maxammo: 1
+    gun_nightvision.clipammo: 1
+    gun_nightvision.recoil: 0
+    gun_nightvision.damage: 0
+    gun_nightvision.delay: 1 second
+    gun_nightvision.item: iron helmet
+    
+    
+    
+    gun_def.fullname: "&6&lDefusal kit"
+    gun_def.cost: 200
+    gun_def.maxammo: 1
+    gun_def.clipammo: 1
+    gun_def.recoil: 0
+    gun_def.damage: 0
+    gun_def.delay: 0 seconds
+    gun_def.item: name tag
+    
+    
+    
+on script load:
+    set {gun_glock.fullname} to {@gun_glock.fullname}
+    set {gun_usp.fullname} to {@gun_usp.fullname}
+    set {gun_deagle.fullname} to {@gun_deagle.fullname}
+    set {gun_p228.fullname} to {@gun_p228.fullname}
+    set {gun_five-seven.fullname} to {@gun_five-seven.fullname}
+    set {gun_m3.fullname} to {@gun_m3.fullname}
+    set {gun_xm1014.fullname} to {@gun_xm1014.fullname}
+    set {gun_mp5.fullname} to {@gun_mp5.fullname}
+    set {gun_tmp.fullname} to {@gun_tmp.fullname}
+    set {gun_p90.fullname} to {@gun_p90.fullname}
+    set {gun_mac10.fullname} to {@gun_mac10.fullname}
+    set {gun_ump.fullname} to {@gun_ump.fullname}
+    set {gun_ak47.fullname} to {@gun_ak47.fullname}
+    set {gun_m4a1.fullname} to {@gun_m4a1.fullname}
+    set {gun_sg552.fullname} to {@gun_sg552.fullname}
+    set {gun_aug.fullname} to {@gun_aug.fullname}
+    set {gun_famas.fullname} to {@gun_famas.fullname}
+    set {gun_galil.fullname} to {@gun_galil.fullname}
+    set {gun_scout.fullname} to {@gun_scout.fullname}
+    set {gun_awp.fullname} to {@gun_awp.fullname}
+    set {gun_sg550.fullname} to {@gun_sg550.fullname}
+    set {gun_m249.fullname} to {@gun_m249.fullname}
+    set {gun_he.fullname} to {@gun_he.fullname}
+    set {gun_flash.fullname} to {@gun_flash.fullname}
+    set {gun_smoke.fullname} to {@gun_smoke.fullname}
+    set {gun_helmet.fullname} to {@gun_helmet.fullname}
+    set {gun_k&h.fullname} to {@gun_k&h.fullname}
+    set {gun_nightvision.fullname} to {@gun_nightvision.fullname}
+    set {gun_def.fullname} to {@gun_def.fullname}
+
+    set {gun_glock.clipammo} to {@gun_glock.clipammo}
+    set {gun_usp.clipammo} to {@gun_usp.clipammo}
+    set {gun_deagle.clipammo} to {@gun_deagle.clipammo}
+    set {gun_p228.clipammo} to {@gun_p228.clipammo}
+    set {gun_five-seven.clipammo} to {@gun_five-seven.clipammo}
+    set {gun_m3.clipammo} to {@gun_m3.clipammo}
+    set {gun_xm1014.clipammo} to {@gun_xm1014.clipammo}
+    set {gun_mp5.clipammo} to {@gun_mp5.clipammo}
+    set {gun_tmp.clipammo} to {@gun_tmp.clipammo}
+    set {gun_p90.clipammo} to {@gun_p90.clipammo}
+    set {gun_mac10.clipammo} to {@gun_mac10.clipammo}
+    set {gun_ump.clipammo} to {@gun_ump.clipammo}
+    set {gun_ak47.clipammo} to {@gun_ak47.clipammo}
+    set {gun_m4a1.clipammo} to {@gun_m4a1.clipammo}
+    set {gun_sg552.clipammo} to {@gun_sg552.clipammo}
+    set {gun_aug.clipammo} to {@gun_aug.clipammo}
+    set {gun_famas.clipammo} to {@gun_famas.clipammo}
+    set {gun_galil.clipammo} to {@gun_galil.clipammo}
+    set {gun_scout.clipammo} to {@gun_scout.clipammo}
+    set {gun_awp.clipammo} to {@gun_awp.clipammo}
+    set {gun_sg550.clipammo} to {@gun_sg550.clipammo}
+    set {gun_m249.clipammo} to {@gun_m249.clipammo}
+    set {gun_he.clipammo} to {@gun_he.clipammo}
+    set {gun_flash.clipammo} to {@gun_flash.clipammo}
+    set {gun_smoke.clipammo} to {@gun_smoke.clipammo}
+    set {gun_helmet.clipammo} to {@gun_helmet.clipammo}
+    set {gun_k&h.clipammo} to {@gun_k&h.clipammo}
+    set {gun_nightvision.clipammo} to {@gun_nightvision.clipammo}
+    set {gun_def.clipammo} to {@gun_def.clipammo}
+
+    set {gun_glock.maxammo} to {@gun_glock.maxammo}
+    set {gun_usp.maxammo} to {@gun_usp.maxammo}
+    set {gun_deagle.maxammo} to {@gun_deagle.maxammo}
+    set {gun_p228.maxammo} to {@gun_p228.maxammo}
+    set {gun_five-seven.maxammo} to {@gun_five-seven.maxammo}
+    set {gun_m3.maxammo} to {@gun_m3.maxammo}
+    set {gun_xm1014.maxammo} to {@gun_xm1014.maxammo}
+    set {gun_mp5.maxammo} to {@gun_mp5.maxammo}
+    set {gun_tmp.maxammo} to {@gun_tmp.maxammo}
+    set {gun_p90.maxammo} to {@gun_p90.maxammo}
+    set {gun_mac10.maxammo} to {@gun_mac10.maxammo}
+    set {gun_ump.maxammo} to {@gun_ump.maxammo}
+    set {gun_ak47.maxammo} to {@gun_ak47.maxammo}
+    set {gun_m4a1.maxammo} to {@gun_m4a1.maxammo}
+    set {gun_sg552.maxammo} to {@gun_sg552.maxammo}
+    set {gun_aug.maxammo} to {@gun_aug.maxammo}
+    set {gun_famas.maxammo} to {@gun_famas.maxammo}
+    set {gun_galil.maxammo} to {@gun_galil.maxammo}
+    set {gun_scout.maxammo} to {@gun_scout.maxammo}
+    set {gun_awp.maxammo} to {@gun_awp.maxammo}
+    set {gun_sg550.maxammo} to {@gun_sg550.maxammo}
+    set {gun_m249.maxammo} to {@gun_m249.maxammo}
+    set {gun_he.maxammo} to {@gun_he.maxammo}
+    set {gun_flash.maxammo} to {@gun_flash.maxammo}
+    set {gun_smoke.maxammo} to {@gun_smoke.maxammo}
+    set {gun_helmet.maxammo} to {@gun_helmet.maxammo}
+    set {gun_k&h.maxammo} to {@gun_k&h.maxammo}
+    set {gun_nightvision.maxammo} to {@gun_nightvision.maxammo}
+    set {gun_def.maxammo} to {@gun_def.maxammo}
+
+    set {gun_deagle.cost} to {@gun_deagle.cost}
+    set {gun_p228.cost} to {@gun_p228.cost}
+    set {gun_five-seven.cost} to {@gun_five-seven.cost}
+    set {gun_m3.cost} to {@gun_m3.cost}
+    set {gun_xm1014.cost} to {@gun_xm1014.cost}
+    set {gun_mp5.cost} to {@gun_mp5.cost}
+    set {gun_tmp.cost} to {@gun_tmp.cost}
+    set {gun_p90.cost} to {@gun_p90.cost}
+    set {gun_mac10.cost} to {@gun_mac10.cost}
+    set {gun_ump.cost} to {@gun_ump.cost}
+    set {gun_ak47.cost} to {@gun_ak47.cost}
+    set {gun_m4a1.cost} to {@gun_m4a1.cost}
+    set {gun_sg552.cost} to {@gun_sg552.cost}
+    set {gun_aug.cost} to {@gun_aug.cost}
+    set {gun_famas.cost} to {@gun_famas.cost}
+    set {gun_galil.cost} to {@gun_galil.cost}
+    set {gun_scout.cost} to {@gun_scout.cost}
+    set {gun_awp.cost} to {@gun_awp.cost}
+    set {gun_sg550.cost} to {@gun_sg550.cost}
+    set {gun_m249.cost} to {@gun_m249.cost}
+    set {gun_he.cost} to {@gun_he.cost}
+    set {gun_flash.cost} to {@gun_flash.cost}
+    set {gun_smoke.cost} to {@gun_smoke.cost}
+    set {gun_helmet.cost} to {@gun_helmet.cost}
+    set {gun_k&h.cost} to {@gun_k&h.cost}
+    set {gun_nightvision.cost} to {@gun_nightvision.cost}
+    set {gun_def.cost} to {@gun_def.cost}
+    
+    set {gun_glock.recoil} to {@gun_glock.recoil}
+    set {gun_usp.recoil} to {@gun_usp.recoil}
+    set {gun_deagle.recoil} to {@gun_deagle.recoil}
+    set {gun_p228.recoil} to {@gun_p228.recoil}
+    set {gun_five-seven.recoil} to {@gun_five-seven.recoil}
+    set {gun_m3.recoil} to {@gun_m3.recoil}
+    set {gun_xm1014.recoil} to {@gun_xm1014.recoil}
+    set {gun_mp5.recoil} to {@gun_mp5.recoil}
+    set {gun_tmp.recoil} to {@gun_tmp.recoil}
+    set {gun_p90.recoil} to {@gun_p90.recoil}
+    set {gun_mac10.recoil} to {@gun_mac10.recoil}
+    set {gun_ump.recoil} to {@gun_ump.recoil}
+    set {gun_ak47.recoil} to {@gun_ak47.recoil}
+    set {gun_m4a1.recoil} to {@gun_m4a1.recoil}
+    set {gun_sg552.recoil} to {@gun_sg552.recoil}
+    set {gun_aug.recoil} to {@gun_aug.recoil}
+    set {gun_famas.recoil} to {@gun_famas.recoil}
+    set {gun_galil.recoil} to {@gun_galil.recoil}
+    set {gun_scout.recoil} to {@gun_scout.recoil}
+    set {gun_awp.recoil} to {@gun_awp.recoil}
+    set {gun_sg550.recoil} to {@gun_sg550.recoil}
+    set {gun_m249.recoil} to {@gun_m249.recoil}
+    set {gun_he.recoil} to {@gun_he.recoil}
+    set {gun_flash.recoil} to {@gun_flash.recoil}
+    set {gun_smoke.recoil} to {@gun_smoke.recoil}
+    set {gun_helmet.recoil} to {@gun_helmet.recoil}
+    set {gun_k&h.recoil} to {@gun_k&h.recoil}
+    set {gun_nightvision.recoil} to {@gun_nightvision.recoil}
+    set {gun_def.recoil} to {@gun_def.recoil}
+
+    set {gun_glock.damage} to {@gun_glock.damage}
+    set {gun_usp.damage} to {@gun_usp.damage}
+    set {gun_deagle.damage} to {@gun_deagle.damage}
+    set {gun_p228.damage} to {@gun_p228.damage}
+    set {gun_five-seven.damage} to {@gun_five-seven.damage}
+    set {gun_m3.damage} to {@gun_m3.damage}
+    set {gun_xm1014.damage} to {@gun_xm1014.damage}
+    set {gun_mp5.damage} to {@gun_mp5.damage}
+    set {gun_tmp.damage} to {@gun_tmp.damage}
+    set {gun_p90.damage} to {@gun_p90.damage}
+    set {gun_mac10.damage} to {@gun_mac10.damage}
+    set {gun_ump.damage} to {@gun_ump.damage}
+    set {gun_ak47.damage} to {@gun_ak47.damage}
+    set {gun_m4a1.damage} to {@gun_m4a1.damage}
+    set {gun_sg552.damage} to {@gun_sg552.damage}
+    set {gun_aug.damage} to {@gun_aug.damage}
+    set {gun_famas.damage} to {@gun_famas.damage}
+    set {gun_galil.damage} to {@gun_galil.damage}
+    set {gun_scout.damage} to {@gun_scout.damage}
+    set {gun_awp.damage} to {@gun_awp.damage}
+    set {gun_sg550.damage} to {@gun_sg550.damage}
+    set {gun_m249.damage} to {@gun_m249.damage}
+    set {gun_he.damage} to {@gun_he.damage}
+    set {gun_flash.damage} to {@gun_flash.damage}
+    set {gun_smoke.damage} to {@gun_smoke.damage}
+    set {gun_helmet.damage} to {@gun_helmet.damage}
+    set {gun_k&h.damage} to {@gun_k&h.damage}
+    set {gun_nightvision.damage} to {@gun_nightvision.damage}
+    set {gun_def.damage} to {@gun_def.damage}
+    
+    set {gun_glock.delay} to {@gun_glock.delay}
+    set {gun_usp.delay} to {@gun_usp.delay}
+    set {gun_deagle.delay} to {@gun_deagle.delay}
+    set {gun_p228.delay} to {@gun_p228.delay}
+    set {gun_five-seven.delay} to {@gun_five-seven.delay}
+    set {gun_m3.delay} to {@gun_m3.delay}
+    set {gun_xm1014.delay} to {@gun_xm1014.delay}
+    set {gun_mp5.delay} to {@gun_mp5.delay}
+    set {gun_tmp.delay} to {@gun_tmp.delay}
+    set {gun_p90.delay} to {@gun_p90.delay}
+    set {gun_mac10.delay} to {@gun_mac10.delay}
+    set {gun_ump.delay} to {@gun_ump.delay}
+    set {gun_ak47.delay} to {@gun_ak47.delay}
+    set {gun_m4a1.delay} to {@gun_m4a1.delay}
+    set {gun_sg552.delay} to {@gun_sg552.delay}
+    set {gun_aug.delay} to {@gun_aug.delay}
+    set {gun_famas.delay} to {@gun_famas.delay}
+    set {gun_galil.delay} to {@gun_galil.delay}
+    set {gun_scout.delay} to {@gun_scout.delay}
+    set {gun_awp.delay} to {@gun_awp.delay}
+    set {gun_sg550.delay} to {@gun_sg550.delay}
+    set {gun_m249.delay} to {@gun_m249.delay}
+    set {gun_he.delay} to {@gun_he.delay}
+    set {gun_flash.delay} to {@gun_flash.delay}
+    set {gun_smoke.delay} to {@gun_smoke.delay}
+    set {gun_helmet.delay} to {@gun_helmet.delay}
+    set {gun_k&h.delay} to {@gun_k&h.delay}
+    set {gun_nightvision.delay} to {@gun_nightvision.delay}
+    set {gun_def.delay} to {@gun_def.delay}
+
+    set {gun_glock.item} to {@gun_glock.item}
+    set {gun_usp.item} to {@gun_usp.item}
+    set {gun_deagle.item} to {@gun_deagle.item}
+    set {gun_p228.item} to {@gun_p228.item}
+    set {gun_five-seven.item} to {@gun_five-seven.item}
+    set {gun_m3.item} to {@gun_m3.item}
+    set {gun_xm1014.item} to {@gun_xm1014.item}
+    set {gun_mp5.item} to {@gun_mp5.item}
+    set {gun_tmp.item} to {@gun_tmp.item}
+    set {gun_p90.item} to {@gun_p90.item}
+    set {gun_mac10.item} to {@gun_mac10.item}
+    set {gun_ump.item} to {@gun_ump.item}
+    set {gun_ak47.item} to {@gun_ak47.item}
+    set {gun_m4a1.item} to {@gun_m4a1.item}
+    set {gun_sg552.item} to {@gun_sg552.item}
+    set {gun_aug.item} to {@gun_aug.item}
+    set {gun_famas.item} to {@gun_famas.item}
+    set {gun_galil.item} to {@gun_galil.item}
+    set {gun_scout.item} to {@gun_scout.item}
+    set {gun_awp.item} to {@gun_awp.item}
+    set {gun_sg550.item} to {@gun_sg550.item}
+    set {gun_m249.item} to {@gun_m249.item}
+    set {gun_he.item} to {@gun_he.item}
+    set {gun_flash.item} to {@gun_flash.item}
+    set {gun_smoke.item} to {@gun_smoke.item}
+    set {gun_helmet.item} to {@gun_helmet.item}
+    set {gun_k&h.item} to {@gun_k&h.item}
+    set {gun_nightvision.item} to {@gun_nightvision.item}
+    set {gun_def.item} to {@gun_def.item}
+
+
+on join:
+    set {gun_glock.ammo.%player%} to 0
+    set {gun_usp.ammo.%player%} to 0
+    set {gun_deagle.ammo.%player%} to 0
+    set {gun_p228.ammo.%player%} to 0
+    set {gun_five-seven.ammo.%player%} to 0
+    set {gun_m3.ammo.%player%} to 0
+    set {gun_xm1014.ammo.%player%} to 0
+    set {gun_mp5.ammo.%player%} to 0
+    set {gun_tmp.ammo.%player%} to 0
+    set {gun_p90.ammo.%player%} to 0
+    set {gun_mac10.ammo.%player%} to 0
+    set {gun_ump.ammo.%player%} to 0
+    set {gun_ak47.ammo.%player%} to 0
+    set {gun_m4a1.ammo.%player%} to 0
+    set {gun_sg552.ammo.%player%} to 0
+    set {gun_aug.ammo.%player%} to 0
+    set {gun_famas.ammo.%player%} to 0
+    set {gun_galil.ammo.%player%} to 0
+    set {gun_scout.ammo.%player%} to 0
+    set {gun_awp.ammo.%player%} to 0
+    set {gun_sg550.ammo.%player%} to 0
+    set {gun_m249.ammo.%player%} to 0
+    
+    set {canshooot.%player%} to true
+    set player's food level to 10
+    wait 1 seconds
+    clear {team.%player%}
+    clear {map_%player%}
+    wait a second
+    make player execute command "/map list"
+    
+on chat:
+    cancel event
+    if {team.%name of player%} is "tt":
+        send "{@team.tt}%name of player%&f: %message%" to all players
+    if {team.%name of player%} is "ct":
+        send "{@team.ct}%name of player%&f: %message%" to all players
+    if {team.%name of player%} is "spectate":
+        send "{@team.spectate}%name of player%&f: %message%" to all players
+              
+    
+on rightclick holding a {@gun_glock.item}:    #Glock
+    cancel event
+    make player execute command "/gun shoot glock %name of player%"
+    
+on rightclick holding a {@gun_usp.item}:    # Usp
+    cancel event
+    make player execute command "/gun shoot usp %name of player%"
+    
+on rightclick holding a {@gun_deagle.item}:    # Deagle
+    cancel event
+    make player execute command "/gun shoot deagle %name of player%"
+
+on rightclick holding a {@gun_five-seven.item}:    # five-seven
+    cancel event
+    make player execute command "/gun shoot five-seven %name of player%"
+    
+on rightclick holding a {@gun_p228.item}:    # p228
+    cancel event
+    make player execute command "/gun shoot p228 %name of player%"
+
+on rightclick holding a {@gun_m3.item}:    # m3
+    cancel event
+    make player execute command "/gun shoot m3 %name of player%"
+    
+on rightclick holding a {@gun_xm1014.item}:    # xm
+    cancel event
+    make player execute command "/gun shoot xm1014 %name of player%"
+
+
+on rightclick holding a {@gun_mp5.item}:    # mp5
+    cancel event
+    make player execute command "/gun shoot mp5 %name of player%"
+
+on rightclick holding a {@gun_tmp.item}:    # tmp
+    cancel event
+    make player execute command "/gun shoot tmp %name of player%"
+
+on rightclick holding a {@gun_p90.item}:    # p90
+    cancel event
+    make player execute command "/gun shoot p90 %name of player%"
+    
+on rightclick holding a {@gun_mac10.item}:    # mac (os) x
+    cancel event
+    make player execute command "/gun shoot mac10 %name of player%"
+            
+on rightclick holding a {@gun_m4a1.item}:    # m4
+    cancel event
+    make player execute command "/gun shoot m4a1 %name of player%"
+  
+on rightclick holding a {@gun_ak47.item}:    # ak
+    cancel event
+    make player execute command "/gun shoot ak47 %name of player%"
+
+on rightclick holding a {@gun_ump.item}:    # ump
+    cancel event
+    make player execute command "/gun shoot ump %name of player%"
+
+on rightclick holding a {@gun_sg552.item}:    # sg552
+    cancel event
+    make player execute command "/gun shoot sg552 %name of player%"
+
+on rightclick holding a {@gun_aug.item}:    # aug
+    cancel event
+    make player execute command "/gun shoot aug %name of player%"
+
+on rightclick holding a {@gun_famas.item}:    # famas
+    cancel event
+    make player execute command "/gun shoot famas %name of player%"
+
+on rightclick holding a {@gun_galil.item}:    # galil
+    cancel event
+    make player execute command "/gun shoot galil %name of player%"
+
+on rightclick holding a {@gun_awp.item}:    # awp
+    cancel event
+    make player execute command "/gun shoot awp %name of player%"
+on leftclick holding a {@gun_awp.item}:
+    cancel event
+    if {gun_awp.scope_1.%player%} is true:
+        if {gun_awp.scope_2.%player%} is true:
+            remove slowness from player
+            set {gun_awp.scope_1.%player%} to false
+            set {gun_awp.scope_2.%player%} to false
+        else:
+            apply slowness 6 to player for 1 day
+            set {gun_awp.scope_2.%player%} to true
+    else:
+        apply slowness 3 to player for 1 day
+        set {gun_awp.scope_1.%player%} to true
+        
+on tool change:
+    remove slowness from player
+    set {gun_awp.scope_1.%player%} to false
+    set {gun_awp.scope_2.%player%} to false
+    set {gun_scout.scope_1.%player%} to false
+    set {gun_scout.scope_2.%player%} to false
+    
+
+on rightclick holding a {@gun_scout.item}:    # scout
+    cancel event
+    make player execute command "/gun shoot scout %name of player%"
+on leftclick holding a {@gun_scout.item}:
+    cancel event
+    if {gun_scout.scope_1.%player%} is true:
+        if {gun_scout.scope_2.%player%} is true:
+            remove slowness from player
+            set {gun_scout.scope_1.%player%} to false
+            set {gun_scout.scope_2.%player%} to false
+        else:
+            apply slowness 6 to player for 1 day
+            set {gun_scout.scope_2.%player%} to true
+    else:
+        apply slowness 3 to player for 1 day
+        set {gun_scout.scope_1.%player%} to true
+
+on rightclick holding a {@gun_sg550.item}:    # sg550
+    cancel event
+    make player execute command "/gun shoot sg550 %name of player%"
+
+on rightclick holding a {@gun_m249.item}:    # M249
+    cancel event
+    make player execute command "/gun shoot m249 %name of player%"
+
+on rightclick holding a {@gun_he.item}:    # he
+    cancel event
+    set {pot} to "he"
+    remove 1 {@gun_he.item} from player
+    shoot a thrown potion at speed 1
+on rightclick holding a {@gun_smoke.item}:    # sg
+    cancel event
+    remove 1 {@gun_smoke.item} from player
+    set {pot} to "sg"
+    shoot a thrown potion at speed 1
+on rightclick holding a {@gun_flash.item}:    # fl
+    cancel event
+    set {pot} to "fl"
+    remove 1 {@gun_flash.item} from player
+    shoot a thrown potion at speed 1
+projectile hit:
+    if projectile is thrown potion:
+        if {pot} is "sg":
+            set {potion.%shooter%} to location of projectile
+            loop 300 times:
+                loop 10 times:
+                    play 30 of effect "smoke" with data 0 at {potion.%shooter%}
+                wait 0.1 second
+        if {pot} is "he":
+            play 1 of effect "largeexplode" with data 1 at location of projectile
+            loop players in radius 4 around location of projectile:
+                damage loop-player by {@gun_he.damage}
+        if {pot} is "fl":
+            loop players in radius 6 around location of projectile:
+                apply blindness 4 to loop-player for 10 seconds
+on damage of player:
+    if projectile is a snowball or thrown potion:
+        set {gun_%{gun.%attacker%}%.damage} to {gun_%{gun.%attacker%}%.damage} parsed as number
+        damage victim by {gun_%{gun.%attacker%}%.damage} hearts
+        set {attacked.%victim%.%name of attacker%} to true
+        wait 2 second
+        set {attacked.%victim%.%name of attacker%} to false
+    else:
+        cancel event
+
+on rightclick holding a {@gun_nightvision.item}:    # nightvision
+    make player execute command "/n"
+    
+on death of player:
+    loop all players:
+        set {will_money.%loop-player%} to {@kill_money} + {money.%loop-player%}
+        set {wil_money.%loop-player%} to {money.%loop-player%} - {@death_money}
+        wait a tick
+        if {attacked.%name of player%.%loop-player%} is true:
+            if {will_money.%loop-player%} is less than {@max_money}:
+                add {@kill_money} to {money.%loop-player%}
+            else:
+                set {money.%loop-player%} to 1600
+        if {@death_money} is more than 0:
+            if loop-player is "%name of player%":
+                if {wil_money.%loop-player%} is more than 0:
+                    remove {@death_money} from {money.%player%}
+                else:
+                    set {money.%loop-player%} to 0
+on shoot:
+    if projectile is a snowball:
+        play {@gunshot_sound} at location of shooter with pitch 1
+        
+on xp spawn:
+    cancel event
+
+On Hunger Meter Change:
+    cancel event	
+every second:
+    loop all players:
+        set {_food.%loop-player%} to food level of loop-player
+        if loop-player is sprinting:
+            remove 1 from {_food.%loop-player%}
+            set food level of loop-player to {_food.%loop-player%}
+            wait 1 second
+            clear {_food.%loop-player%}
+        else:
+            if food level of loop-player is less than 10:
+                set {_food.%loop-player%} to  food level of loop-player
+                add 0.5 to {_food.%loop-player%}
+                set food level of loop-player to {_food.%loop-player%}
+                wait 1 second
+                clear {_food.%loop-player%}
+on respawn:
+    wait 3 ticks
+    if {map_%player%} is set:
+        if {spawn_tt.%{map_%player%}%} is set:
+            if {team.%player%} is "tt":
+                teleport player to  {spawn_tt.%{map_%player%}%}
+        if {spawn_ct.%{world.%player%}%} is set:
+            if {team.%player%} is "ct":
+                teleport player to  {spawn_ct.%{map_%player%}%}
+command /map [<text>] [<text>] [<text>] [<text>]:
+    trigger:
+        if arg 1 is "add":
+            if arg 2 is set:
+                if arg 2 is "spawn":
+                    if arg 4 is set:
+                        if {allmaps::*} contains arg 4:
+                            if arg 3 is "tt":
+                                set {spawn_tt.%arg 4%} to location of player
+                                send "&aSuccessfully added {@team.tt}Terrorists &a spawn!"
+                            if arg 3 is "ct":
+                                set {spawn_ct.%arg 4%} to location of player
+                                send "&aSuccessfully added {@team.ct}Counter-Terrorists &a spawn!"
+                        else:
+                            send "&4There is no map &c%arg 4%&4!"
+                else:
+                    if arg 3 is not set:
+                        make player execute command "/map add %arg 2% current"
+                    else:
+                        if {allmaps::*} contains arg 2:
+                            send "&cThere is map &4%arg 2%"
+                        else:
+                            if arg 3 is "current":
+                                set {map_%arg 2%.world} to world of player
+                                add arg 2 to {allmaps::*}
+                                send "&aSuccessfully added &2%arg 2%"
+                            else:
+                                loop all worlds:
+                                    if loop-world is arg 3:
+                                        set {map_%arg 2%.world} to arg 3
+                                        add arg 2 to {allmaps::*}
+                                        send "&aSuccessfully added &2%arg 2%"
+                                    else:
+                                        send "&4There is no world &c%arg 3%&4!"
+        if arg 1 is "remove":
+            if arg 2 is set:
+                if {allmaps::*} contains arg 2:
+                    clear {spawn_ct.%arg 2%}
+                    clear {spawn_tt.%arg 2%}
+                    remove arg 2 from {allmaps::*}
+                    clear {map_%arg 2%.world}
+                else:
+                    send "&cThere is no map &c%arg 2%&4!"
+        if arg 1 is "join":
+            if arg 2 is set:
+                if {allmaps::*} contains arg 2:
+                    set {back.%player%} to location of player
+                    teleport player to {map_%arg 2%.world}
+                    set {map_%player%} to arg 2
+                    wait a tick
+                    teleport player to {spawn_tt.%{map_%player%}%}
+                    make player execute command "/team join"
+                else:
+                    send "&cThere is no map &c%arg 2%&4!"
+                    send "&cPlease use &a/map join <map name> &c to join a map"
+            else:
+                send "&cPlease use &a/map join <map name> &c to join a map"
+            
+        if arg 1 is "leave":
+            clear {map_%player%}
+            teleport player to {back.%player%}
+        if arg 1 is "list":
+            send "&cPlease use &a/map join <map name> &c to join a map"
+            send "Available maps:"
+            send "&b%{allmaps::*}%"
+        if arg 1 is "test":
+            send "map_player: %{map_%player%}%"
+            send "tt_spawn: %{spawn_tt.%{map_%player%}%}%"
+            send "ct_spawn: %{spawn_ct.%{map_%player%}%}%"
+command /bomb <text> [<text>] [<player>]:
+    trigger:
+        if arg 1 is "plant":
+            if {team.%arg player%} is "tt":
+                if arg 2 is not set:
+                    make console execute command "/bomb plant a"
+                else:
+                    if {bomb.bs.target} is set:
+                        send "{@team.tt}Bomb already planted at &6&l%{bomb.bs.target}%" to arg player
+                    else:
+                        set {planting_location} to location of arg player
+                        set {bomb.bs.target} to arg 2
+                        set {to_explode} to 0
+                        send "{@team.tt}Planting..." to arg player
+                        set level progress of the arg player to 0.99
+                        set the level of arg player to 0
+                        loop 5 times:
+                            set the level of arg player to 6 - loop-number
+                            wait 1 second
+                        loop all players:
+                            if {team.%loop-player%} is "tt":
+                                send "{@team.tt}Bomb Planted at &6&l%{bomb.bs.target}%!" to loop-players
+                            else:
+                                send "{@team.tt}Bomb Planted!" to loop-players
+                            set level progress of the loop-player to 0
+                        loop {@explode_seconds} times:
+                            loop all players:
+                                set the level of loop-player to {@explode_seconds} - {to_explode}
+                                set level progress of the loop-player to 0.99
+                            if {bomb_unplanted.%{bomb.bs.target}%} is true:
+                                exit loop
+                            else:
+                                add 1 to {to_explode}
+                                wait a second
+                                loop all players:
+                                    set level progress of the loop-player to 0.99
+                                    set level of the loop-player to 0
+                        if {bomb_unplanted.%{bomb.bs.target}%} is true:
+                            send "&9&lBomb succesfully unplanted!" to all players
+                            set {bomb_unplanted.%{bomb.bs.target}%} to false
+                            clear {bomb.bs.target}
+                            clear {planting_location}
+                            set the level of arg player to 0
+                        else:
+                            send "&4&lBOOOM!" to all players
+                            play "EXPLODE" at {planting_location} with pitch 1
+                            play 20 of effect "largeexplode" with data 5 at {planting_location}
+                            clear {planting_location}
+                            clear {bomb.bs.target}
+                            set the level of arg player to 0
+        if arg 1 is "unplant":
+            if {team.%arg player%} is "ct":
+                if arg 2 is not set:
+                    make console execute command "/bomb unplant a"
+                else:
+                    set {bomb.bs.do} to arg 2
+                    if {bomb.bs.target} is set:
+                        if {bomb.bs.do} is {bomb.bs.target}:
+                            send "{@team.ct}Unplanting..." to arg player
+                            set level progress of the arg player to 0.99
+                            set the level of arg player to 0
+                            loop 5 times:
+                                set the level of arg player to 6 - loop-number
+                                wait 1 second
+                            set {bomb_unplanted.%{bomb.bs.target}%} to true
+                        else:
+                            send "{@team.ct}Sorry, not this bombside." to arg player
+                    else:
+                        send "{@team.ct}Bomb is not planted!." to arg player
+        if arg 1 is "reset":
+            set {bomb_unplanted.%{bomb.bs.target}%} to false
+            clear {bomb.bs.target}
+            clear {planting_location}
+            
+command /team [<text>] [<text>] [<player>]:
+    aliases: teams
+    trigger:
+        if arg 1 is set:
+            if arg 1 is "join":
+                if {map_%player%} is set:
+                    if arg 2 is set:
+                        if arg player is set:
+                            loop all players:
+                                if loop-player is arg player:
+                                    make loop-player execute command "/team join %arg 2%"
+                        else:
+                            if arg 2 is "red" or "tt" or "terrorists":                                 #tt
+                                set {team.%player%} to "tt"
+                                set the player's tablist name to "{@team.tt}%name of player%"
+                                teleport player to {spawn_tt.%{map_%player%}%}
+                                loop all players:
+                                    if {map_%loop-player%} is {map_%player%}:
+                                        send "&4&l%name of player%{@team.tt} joined Terrorists!" to loop-player
+                            if arg 2 is "blue" or "ct" or "counterterrorists" or "counter-terrorists": #ct
+                                set {team.%player%} to "ct"
+                                teleport player to {spawn_ct.%{map_%player%}%}
+                                set the player's tablist name to "{@team.ct}%name of player%"
+                                loop all players:
+                                    if {map_%loop-player%} is {map_%player%}:
+                                        send "&1&l%name of player%{@team.ct} joined Counter-Terrorists!" to loop-player
+                            if arg 2 is "spectate" or "spectator": #spectator
+                                set {team.%player%} to "spectate"
+                                teleport player to {spawn_tt.%{map_%player%}%}
+                                set the player's tablist name to "{@team.spectate}%name of player%"
+                    else:
+                        show "s;1;i;%{gun_ak47.item}%;n;{@team.tt}Terrorists;l;{@team.tt}Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;{@team.ct}Counter-Terrorists;l;{@team.ct}Join ct team;c;team join ct %name of player%;s;3;i;stone;n;{@team.spectate}Spectators;l;{@team.spectate}Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
+                else:
+                    make player execute command "/map list"
+            if arg 1 is "leave":
+                make player execute command "/team join spectate"
+        else:
+            loop all players:
+                if {team.%loop-player%} is "tt":
+                    send "{@team.tt}%loop-player%" to player
+                if {team.%loop-player%} is "ct":
+                    send "{@team.ct}%loop-player%" to player
+                if {team.%loop-player%} is "spectate":
+                    send "{@team.spectate}%loop-player%" to player
+            
+command /gun [<text>] [<text>] [<player>]:    #gun choose %gun%; gun buy %gun%;
+    trigger:
+        if arg 1 is not set:
+            make player execute command "gun buy"
+        else:
+            if arg 1 is "choose":#change
+                if arg 2 is set: #28; +> tarcza, dual
+                    if arg 2 is "usp":
+                        if player has stone shovel:
+                            send "You already have %{gun_usp.fullname}%"
+                        else:
+                            remove all shovels from player
+                            give player 1 {@gun_usp.item}
+                            send "You choosed %{gun_usp.fullname}%"
+                    if arg 2 is "glock":
+                        if player has wooden shovel:
+                            send "You already have %{gun_glock.fullname}%"
+                        else:
+                            remove all stone shovels from player
+                            give player 1 {@gun_glock.item}
+                            send "You choosed %{gun_glock.fullname}%"
+                    if arg 2 is "deagle":
+                        if {gun_deagle.%player%_bought} is true:
+                            if player has diamond shovel:
+                                send "You already have %{gun_deagle.fullname}%"
+                            else:
+                                remove all shovels from player
+                                give player 1 {@gun_deagle.item}
+                                send "You choosed %{gun_deagle.fullname}%"
+                        else:
+                            send "You have not bought %{gun_deagle.fullname}%"
+                    if arg 2 is "p228":
+                        if {gun_p228.%player%_bought} is true:
+                            if player has gold shovel:
+                                send "You already have %{gun_p228.fullname}%"
+                            else:
+                                remove all shovels from player
+                                give player 1 {@gun_p228.item}
+                                send "You choosed %{gun_p228.fullname}%"
+                        else:
+                            send "You have not bought %{gun_p228.fullname}%"
+                    if arg 2 is "five-seven": 
+                        if {gun_five-seven.%player%_bought} is true:
+                            if player has {@gun_five-seven.item}:
+                                send "You already have %{gun_five-seven.fullname}%"
+                            else:
+                                remove all shovels from player
+                                give player 1 {@gun_five-seven.item}
+                                send "You choosed %{gun_five-seven.fullname}%"
+                        else:
+                            send "You have not bought %{gun_five-seven.fullname}%"
+                   
+                    else: 
+                        if {gun_%arg 2%.%player%_bought} is true:
+                            if player has {gun_%arg 2%.item}:
+                                send "You already have %{gun_%arg 2%.fullname}%"
+                            else:
+                                remove all pickaxes from player
+                                remove all axes from player
+                                remove all hoes from player
+                                remove all paper from player
+                                remove all fishing rods from player
+                                remove all blaze powder from player
+                                remove all blaze rods from player
+                                remove all feathers from player
+                                remove all diamonds from player
+                                remove all carrot on a stick from player
+                                make console execute command "/give %name of player% %{gun_%arg 2%.item}% 1"
+                                send "You choosed %{gun_%arg 2%.fullname}%"
+                        else:
+                            send "You have not bought %{gun_%arg 2%.fullname}%"
+
+            if arg 1 is "buy":
+                if arg 2 is not set:
+                    if {team.%player%} is "tt":
+                        show "s;1;i;%{gun_glock.item}%;n;{@team.tt}Pistols;l;{@team.tt}Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;{@team.tt}Shotguns;l;{@team.tt}Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;{@team.tt}SMG;l;{@team.tt}Buy a SMG;c;gun buy smg %name of player%;s;4;i;iron hoe;n;{@team.tt}Rifles;l;{@team.tt}Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;{@team.tt}Machine Guns;l;{@team.tt}Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;{@team.tt}Equipment;l;{@team.tt}Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;{@team.tt}Primary Ammo;l;{@team.tt}Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;{@team.tt}Secondary Ammo;l;{@team.tt}Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
+                    if {team.%player%} is "ct":
+                        show "s;1;i;%{gun_usp.item}%;n;{@team.ct}Pistols;l;{@team.ct}Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;{@team.ct}Shotguns;l;{@team.ct}Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;{@team.ct}SMG;l;{@team.ct}Buy a SMG;c;gun buy smg %name of player%;s;4;i;wooden hoe;n;{@team.ct}Rifles;l;{@team.ct}Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;{@team.ct}Machine Guns;l;{@team.ct}Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;{@team.ct}Equipment;l;{@team.ct}Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;{@team.ct}Primary Ammo;l;{@team.ct}Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;{@team.ct}Secondary Ammo;l;{@team.ct}Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
+                else:
+                    if arg-player is set:
+                        if arg 2 is "menu":
+                            loop all players:
+                                if loop-player is arg player:
+                                    wait 3 ticks
+                                    make loop-player execute command "/gun buy"
+                        if arg 2 is "reset":
+                            loop all players:
+                                if loop-player is arg player:
+                                    set {gun_deagle.%loop-player%_bought} to false
+                                    set {gun_p228.%loop-player%_bought} to false
+                                    set {gun_five-seven.%loop-player%_bought} to false
+                                    set {gun_m3.%loop-player%_bought} to false
+                                    set {gun_mx1014.%loop-player%_bought} to false
+                                    set {gun.bought.deagle} to false
+                                    set {gun.bought.deagle} to false
+                                    set {gun.bought.deagle} to false
+                        if arg 2 is "pistol":
+                            loop all players:
+                                if loop-player is arg player:
+                                    wait 3 ticks
+                                    show "s;1;i;lava bucket;n;&4&lBack;l;&6Go back.;c;gun buy menu %loop-player%;s;9;i;%{gun_deagle.item}%;n;%{gun_deagle.fullname}%%{gun_deagle.canbuy.%loop-player%}%{@gun_deagle.cost}$;l;&6Buy this gun.;c;gun buy deagle %loop-player%;s;7;i;%{gun_five-seven.item}%;n;%{gun_five-seven.fullname}%%{gun_five-seven.canbuy.%loop-player%}%{@gun_five-seven.cost}$;l;&6Buy this gun.;c;gun buy five-seven %loop-player%;s;8;i;%{gun_p228.item}%;n;%{gun_p228.fullname}%%{gun_p228.canbuy.%loop-player%}%{@gun_p228.cost}$;l;&6Buy this gun.;c;gun buy p228 %loop-player%" with 1 rows named "Choose a pistol:" to loop-player
+
+                        if arg 2 is "shotgun":
+                            loop all players:
+                                if loop-player is arg player:
+                                    wait 3 ticks
+                                    show "s;1;i;lava bucket;n;&4&lBack;l;&6Go back.;c;gun buy menu %loop-player%;s;9;i;%{gun_xm1014.item}%;n;%{gun_xm1014.fullname}%%{gun_xm1014.canbuy.%loop-player%}%{@gun_xm1014.cost}$;l;&6Buy this gun.;c;gun buy xm1014 %loop-player%;s;8;i;%{gun_m3.item}%;n;%{gun_m3.fullname}%%{gun_m3.canbuy.%loop-player%}%{@gun_m3.cost}$;l;&6Buy this gun.;c;gun buy m3 %loop-player%" with 1 rows named "Choose a shotgun:" to loop-player
+
+                        if arg 2 is "smg":
+                            loop all players:
+                                if loop-player is arg player:
+                                    wait 3 ticks
+                                    show "s;1;i;lava bucket;n;&4&lBack;l;&6Go back.;c;gun buy menu %loop-player%;s;9;i;%{gun_mp5.item}%;n;%{gun_mp5.fullname}%%{gun_mp5.canbuy.%loop-player%}%{@gun_mp5.cost}$;l;&6Buy this gun.;c;gun buy mp5 %loop-player%;s;8;i;%{gun_tmp.item}%;n;%{gun_tmp.fullname}%%{gun_tmp.canbuy.%loop-player%}%{@gun_tmp.cost}$;l;&6Buy this gun.;c;gun buy tmp %loop-player%;s;7;i;%{gun_ump.item}%;n;%{gun_ump.fullname}%%{gun_ump.canbuy.%loop-player%}%{@gun_ump.cost}$;l;&6Buy this gun.;c;gun buy ump %loop-player%;s;6;i;%{gun_p90.item}%;n;%{gun_p90.fullname}%%{gun_p90.canbuy.%loop-player%}%{@gun_p90.cost}$;l;&6Buy this gun.;c;gun buy p90 %loop-player%;s;5;i;%{gun_mac10.item}%;n;%{gun_mac10.fullname}%%{gun_mac10.canbuy.%loop-player%}%{@gun_mac10.cost}$;l;&6Buy this gun.;c;gun buy mac10 %loop-player%" with 1 rows named "Choose a smg:" to loop-player
+
+                        if arg 2 is "deagle":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_deagle.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_deagle.fullname}%" to loop-player
+                                    else:
+                                        set {gun_deagle.%loop-player%_bought} to true
+                                        remove all shovels from loop-player
+                                        give loop-player 1 {@gun_deagle.item}
+                                        send "You bought %{gun_deagle.fullname}%" to loop-player
+
+                        if arg 2 is "p228":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_p228.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_p228.fullname}%" to loop-player
+                                    else:
+                                        set {gun_p228.%loop-player%_bought} to true
+                                        remove all shovels from loop-player
+                                        give loop-player 1 {@gun_p228.item}
+                                        send "You bought %{gun_p228.fullname}%" to loop-player
+
+                        if arg 2 is "five-seven":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_five-seven.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_five-seven.fullname}%" to loop-player
+                                    else:
+                                        set {gun_five-seven.%loop-player%_bought} to true
+                                        remove all shovels from loop-player
+                                        give loop-player 1 {@gun_five-seven.item}
+                                        send "You bought %{gun_five-seven.fullname}%" to loop-player
+
+                        if arg 2 is "m3":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_m3.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_m3.fullname}%" to loop-player
+                                    else:
+                                        set {gun_m3.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_mp5.item}
+                                        give loop-player 1 {@gun_m3.item}
+                                        send "You bought %{gun_m3.fullname}%" to loop-player
+                                        
+                        if arg 2 is "xm1014":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_xm1014.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_xm1014.fullname}%" to loop-player
+                                    else:
+                                        set {gun_xm1014.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_mp5.item}
+                                        give loop-player 1 {@gun_xm1014.item}
+                                        send "You bought %{gun_xm1014.fullname}%" to loop-player
+
+                        if arg 2 is "mp5":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_mp5.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_mp5.fullname}%" to loop-player
+                                    else:
+                                        set {gun_mp5.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_mp5.item}
+                                        send "You bought %{gun_mp5.fullname}%" to loop-player
+                        if arg 2 is "tmp":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_tmp.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_tmp.fullname}%" to loop-player
+                                    else:
+                                        set {gun_tmp.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_tmp.item}
+                                        send "You bought %{gun_tmp.fullname}%" to loop-player
+                        if arg 2 is "p90":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_p90.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_p90.fullname}%" to loop-player
+                                    else:
+                                        set {gun_p90.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_p90.item}
+                                        send "You bought %{gun_p90.fullname}%" to loop-player
+                        if arg 2 is "mac10":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_mac10.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_mac10.fullname}%" to loop-player
+                                    else:
+                                        set {gun_mac10.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_mac10.item}
+                                        send "You bought %{gun_mac10.fullname}%" to loop-player
+                        if arg 2 is "ump":
+                            loop all players:
+                                if loop-player is arg player:
+                                    if {gun_ump.%loop-player%_bought} is true:
+                                        send "You have already bought %{gun_ump.fullname}%" to loop-player
+                                    else:
+                                        set {gun_ump.%loop-player%_bought} to true
+                                        remove all pickaxes from loop-player
+                                        remove all axes from loop-player
+                                        remove all hoes from loop-player
+                                        remove all paper from loop-player
+                                        remove all fishing rods from loop-player
+                                        remove all blaze powder from loop-player
+                                        remove all blaze rods from loop-player
+                                        remove all feathers from loop-player
+                                        remove all diamonds from loop-player
+                                        remove all carrot on a stick from loop-player
+                                        give loop-player 1 {@gun_ump.item}
+                                        send "You bought %{gun_ump.fullname}%" to loop-player
+            if arg 1 is "shoot":
+                if arg 2 is set:
+                    if arg player is set:
+                        if {canshooot.%player%} is true:
+                            set {gun.%player%} to arg 2 
+                            set {canshooot.%player%} to false
+                            set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
+                            make arg player shoot an snowball with speed 3
+                            remove 1 from {gun_%arg 2%.ammo.%player%}
+                            if {gun_%arg 2%.ammo.%player%} is -1:
+                                set the name of the player's tool to "&f&l-&9RELOADING&f&l-"
+                                wait 3 seconds
+                                set {gun_%arg 2%.ammo.%player%} to {gun_%arg 2%.clipammo}
+                                set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
+                                set {canshooot.%player%} to true
+                                remove 1 from {gun_%arg 2%.ammo.%player%}
+                            else:
+                                wait {gun_%arg 2%.delay}
+                                set {canshooot.%player%} to true
+command /money [<text>] [<player>] [<number>]:
+    aliases: m
+    trigger:
+        if {money.%player%} is not set:
+            set {money.%player%} to {@starting_money}
+        if arg 1 is not set:
+            make player execute command "/m show %name of player%"
+        else:
+            if arg 1 is "show":
+                if arg player is not set:
+                    make player execute command  "/m show %name of player%"
+                else:
+                    send "&2Money: &a %{money.%arg player%}%"
+            if arg 1 is "reset":
+                if arg player is not set:
+                    make player execute command  "/m reset %name of player%"
+                else:
+                    set {money.%player%} to {@starting_money}
+                    send "&2Money: &a %{money.%arg player%}%"
+            if arg 1 is "remove":
+                if arg player is not set:
+                    make player execute command  "/m remove %name of player%"
+                else:
+                    remove arg number from {money.%player%}
+                    send "&2Money: &a %{money.%arg player%}%"
+            if arg 1 is "set":
+                if arg player is not set:
+                    make player execute command  "/m set %name of player%"
+                else:
+                    set {money.%player%} to arg number
+                    send "&2Money: &a %{money.%arg player%}%"
+            if arg 1 is "reset":
+                if arg player is not set:
+                    make player execute command  "/m add %name of player%"
+                else:
+                    add arg number to  {money.%player%}
+                    send "&2Money: &a %{money.%arg player%}%"
+            if arg 1 is "stats":
+                if arg player is not set:
+                    make player execute command  "/m stats %name of player%"
+                else:
+                    send "&2money: &a %{money.%arg player%}%"
+                    send "&2will_money: &a %{will_money.%arg player%}%"
+                    send "&2do_kill_money: &a %{money.%arg player%} + {@kill_money}%"
+                    send "&2do_death_money: &a %{money.%arg player%} - {@death_money}%"
+on command "/amxsx":
+    cancel event
+    make player execute command "/sk reload amxsx"
+on command "/r":     
+    cancel event       
+    set the name of the player's tool to "&9-&lRELOADING&9-"
+    wait 3 seconds
+    set {gun_%{gun.%player%}%.ammo.%player%} to {gun_%{gun.%player%}%.clipammo}
+    set the name of the player's tool to "%{gun_%{gun.%player%}%.fullname}% &9%{gun_%{gun.%player%}%.ammo.%player%}%/%{gun_%{gun.%player%}%.clipammo}%"
+    set {canshooot.%player%} to true
+    remove 1 from {gun_%{gun.%player%}%.ammo.%player%}
+on command "/n":
+    cancel event
+    if player has 1 {@gun_nightvision.item}:
+        if {gun_nightvision.%player%} is true:
+            remove night vision from player
+            set {gun_nightvision.%player%} to false
+        else:
+            apply night vision to player for 1 day
+            set {gun_nightvision.%player%} to true
+on command "/nn":
+    cancel event
+    set {ninja.%player%} to location of player
+    loop all players in radius 20 around player:
+        send "&c-&4&l-&0&lNINJA!!!&4&l-&c-" to loop-player
+        apply invisibility to player for 2 seconds
+        teleport player 2 blocks behind loop-player 
+        loop 30 times:
+            loop 10 times:
+                play 70 of effect "smoke" with data 0 at {ninja.%player%}
+            wait 0.1 seconds
