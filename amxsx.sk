@@ -372,7 +372,6 @@ on script load:
     set {team.ct} to {@team.ct}
     set {team.spectate} to {@team.spectate}
     
-    set {gun_glock.fullname} to {@gun_glock.fullname}
     set {gun_usp.fullname} to {@gun_usp.fullname}
     set {gun_deagle.fullname} to {@gun_deagle.fullname}
     set {gun_p228.fullname} to {@gun_p228.fullname}
@@ -1038,36 +1037,68 @@ command /team [<text>] [<text>] [<player>]:
     trigger:
         if arg 1 is set:
             if arg 1 is "join":
-                if {map_%player%} is set:
-                    if arg 2 is set:
-                        if arg player is set:
-                            loop all players:
-                                if loop-player is arg player:
-                                    wait 3 ticks
-                                    make loop-player execute command "/team join %arg 2%"
+                if executor is player:
+                    if {map_%name of player%} is set:
+                        if arg 2 is set:
+                            if arg player is set:
+                                loop all players:
+                                    if loop-player is arg player:
+                                        wait 3 ticks
+                                        make loop-player execute command "/team join %arg 2%"
+                            else:
+                                if arg 2 is "red" or "tt" or "terrorists":                                 #tt
+                                    set {team.%player%} to "tt"
+                                    set the player's tablist name to "%{team.tt}%%name of player%"
+                                    teleport player to {spawn_tt.%{map_%player%}%}
+                                    loop all players:
+                                        if {map_%loop-player%} is {map_%player%}:
+                                            send "&4&l%name of player%%{team.tt}% joined Terrorists!" to loop-player
+                                if arg 2 is "blue" or "ct" or "counterterrorists" or "counter-terrorists": #ct
+                                    set {team.%player%} to "ct"
+                                    teleport player to {spawn_ct.%{map_%player%}%}
+                                    set the player's tablist name to "%{team.ct}%%name of player%"
+                                    loop all players:
+                                        if {map_%loop-player%} is {map_%player%}:
+                                            send "&1&l%name of player%%{team.ct}% joined Counter-Terrorists!" to loop-player
+                                if arg 2 is "spectate" or "spectator": #spectator
+                                    set {team.%player%} to "spectate"
+                                    teleport player to {spawn_tt.%{map_%player%}%}
+                                    set the player's tablist name to "%{team.spectate}%%name of player%"
                         else:
-                            if arg 2 is "red" or "tt" or "terrorists":                                 #tt
-                                set {team.%player%} to "tt"
-                                set the player's tablist name to "%{team.tt}%%name of player%"
-                                teleport player to {spawn_tt.%{map_%player%}%}
-                                loop all players:
-                                    if {map_%loop-player%} is {map_%player%}:
-                                        send "&4&l%name of player%%{team.tt}% joined Terrorists!" to loop-player
-                            if arg 2 is "blue" or "ct" or "counterterrorists" or "counter-terrorists": #ct
-                                set {team.%player%} to "ct"
-                                teleport player to {spawn_ct.%{map_%player%}%}
-                                set the player's tablist name to "%{team.ct}%%name of player%"
-                                loop all players:
-                                    if {map_%loop-player%} is {map_%player%}:
-                                        send "&1&l%name of player%%{team.ct}% joined Counter-Terrorists!" to loop-player
-                            if arg 2 is "spectate" or "spectator": #spectator
-                                set {team.%player%} to "spectate"
-                                teleport player to {spawn_tt.%{map_%player%}%}
-                                set the player's tablist name to "%{team.spectate}%%name of player%"
+                            show "s;1;i;%{gun_ak47.item}%;n;%{team.tt}%Terrorists;l;%{team.tt}%Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;%{team.ct}%Counter-Terrorists;l;%{team.ct}%Join ct team;c;team join ct %name of player%;s;3;i;stone;n;%{team.spectate}%Spectators;l;%{team.spectate}%Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
                     else:
-                        show "s;1;i;%{gun_ak47.item}%;n;%{team.tt}%Terrorists;l;%{team.tt}%Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;%{team.ct}%Counter-Terrorists;l;%{team.ct}%Join ct team;c;team join ct %name of player%;s;3;i;stone;n;%{team.spectate}%Spectators;l;%{team.spectate}%Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
+                        make player execute command "/map list"
                 else:
-                    make player execute command "/map list"
+                    if 1 is 1:
+                        if arg 2 is set:
+                            if arg player is set:
+                                loop all players:
+                                    if loop-player is arg player:
+                                        wait 3 ticks
+                                        make loop-player execute command "/team join %arg 2%"
+                            else:
+                                if arg 2 is "red" or "tt" or "terrorists":                                 #tt
+                                    set {team.%player%} to "tt"
+                                    set the player's tablist name to "%{team.tt}%%name of player%"
+                                    teleport player to {spawn_tt.%{map_%player%}%}
+                                    loop all players:
+                                        if {map_%loop-player%} is {map_%player%}:
+                                            send "&4&l%name of player%%{team.tt}% joined Terrorists!" to loop-player
+                                if arg 2 is "blue" or "ct" or "counterterrorists" or "counter-terrorists": #ct
+                                    set {team.%player%} to "ct"
+                                    teleport player to {spawn_ct.%{map_%player%}%}
+                                    set the player's tablist name to "%{team.ct}%%name of player%"
+                                    loop all players:
+                                        if {map_%loop-player%} is {map_%player%}:
+                                            send "&1&l%name of player%%{team.ct}% joined Counter-Terrorists!" to loop-player
+                                if arg 2 is "spectate" or "spectator": #spectator
+                                    set {team.%player%} to "spectate"
+                                    teleport player to {spawn_tt.%{map_%player%}%}
+                                    set the player's tablist name to "%{team.spectate}%%name of player%"
+                        else:
+                            show "s;1;i;%{gun_ak47.item}%;n;%{team.tt}%Terrorists;l;%{team.tt}%Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;%{team.ct}%Counter-Terrorists;l;%{team.ct}%Join ct team;c;team join ct %name of player%;s;3;i;stone;n;%{team.spectate}%Spectators;l;%{team.spectate}%Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
+                    else:
+                        send "&4WTF!?!?!? &6&l1 &c&l is not &a&l1&c&l! &4&lHAHAHAHAH"
             if arg 1 is "leave":
                 make player execute command "/team join spectate"
         else:
