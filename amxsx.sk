@@ -372,6 +372,7 @@ on script load:
     set {team.ct} to {@team.ct}
     set {team.spectate} to {@team.spectate}
     
+    set {gun_glock.fullname} to {@gun_glock.fullname}
     set {gun_usp.fullname} to {@gun_usp.fullname}
     set {gun_deagle.fullname} to {@gun_deagle.fullname}
     set {gun_p228.fullname} to {@gun_p228.fullname}
