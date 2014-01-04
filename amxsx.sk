@@ -1,9 +1,9 @@
 options:
     explode_seconds: 30
     gunshot_sound: "GHAST_FIREBALL"
-    team.ct: &9&l
-    team.tt: &c&l
-    team.spectate: &7
+    team.ct: "&9&l"
+    team.tt: "&c&l"
+    team.spectate: "&7"
     
     starting_money: 800
     max_money: 16000
@@ -368,7 +368,10 @@ options:
     
     
 on script load:
-    set {gun_glock.fullname} to {@gun_glock.fullname}
+    set {team.tt} to {@team.tt}
+    set {team.ct} to {@team.ct}
+    set {team.spectate} to {@team.spectate}
+    
     set {gun_usp.fullname} to {@gun_usp.fullname}
     set {gun_deagle.fullname} to {@gun_deagle.fullname}
     set {gun_p228.fullname} to {@gun_p228.fullname}
@@ -671,13 +674,16 @@ on join:
     
 on chat:
     cancel event
-    if {team.%name of player%} is "tt":
-        send "{@team.tt}%name of player%&f: %message%" to all players
-    if {team.%name of player%} is "ct":
-        send "{@team.ct}%name of player%&f: %message%" to all players
-    if {team.%name of player%} is "spectate":
-        send "{@team.spectate}%name of player%&f: %message%" to all players
-              
+    loop all players:
+        if {team.%player%} is set:
+            if {team.%name of player%} is "tt":
+                send "%{team.tt}%%name of player%&f: %message%" to loop-player
+            if {team.%name of player%} is "ct":
+                send "%{team.ct}%%name of player%&f: %message%" to loop-player
+            if {team.%name of player%} is "spectate":
+                send "%{team.spectate}%%name of player%&f: %message%" to loop-player
+        else:
+            send "&e&l%name of player%&f: %message%" to loop-player
     
 on rightclick holding a {@gun_glock.item}:    #Glock
     cancel event
@@ -739,6 +745,9 @@ on rightclick holding a {@gun_ump.item}:    # ump
 on rightclick holding a {@gun_sg552.item}:    # sg552
     cancel event
     make player execute command "/gun shoot sg552 %name of player%"
+on leftclick holding a {@gun_sg552.item}:
+    cancel event
+    make player execute command "/scope"
 
 on rightclick holding a {@gun_aug.item}:    # aug
     cancel event
@@ -757,24 +766,12 @@ on rightclick holding a {@gun_awp.item}:    # awp
     make player execute command "/gun shoot awp %name of player%"
 on leftclick holding a {@gun_awp.item}:
     cancel event
-    if {gun_awp.scope_1.%player%} is true:
-        if {gun_awp.scope_2.%player%} is true:
-            remove slowness from player
-            set {gun_awp.scope_1.%player%} to false
-            set {gun_awp.scope_2.%player%} to false
-        else:
-            apply slowness 6 to player for 1 day
-            set {gun_awp.scope_2.%player%} to true
-    else:
-        apply slowness 3 to player for 1 day
-        set {gun_awp.scope_1.%player%} to true
-        
+    make player execute command "/scope"
+    
 on tool change:
     remove slowness from player
-    set {gun_awp.scope_1.%player%} to false
-    set {gun_awp.scope_2.%player%} to false
-    set {gun_scout.scope_1.%player%} to false
-    set {gun_scout.scope_2.%player%} to false
+    set {gun.scope_1.%player%} to false
+    set {gun.scope_2.%player%} to false
     
 
 on rightclick holding a {@gun_scout.item}:    # scout
@@ -782,21 +779,14 @@ on rightclick holding a {@gun_scout.item}:    # scout
     make player execute command "/gun shoot scout %name of player%"
 on leftclick holding a {@gun_scout.item}:
     cancel event
-    if {gun_scout.scope_1.%player%} is true:
-        if {gun_scout.scope_2.%player%} is true:
-            remove slowness from player
-            set {gun_scout.scope_1.%player%} to false
-            set {gun_scout.scope_2.%player%} to false
-        else:
-            apply slowness 6 to player for 1 day
-            set {gun_scout.scope_2.%player%} to true
-    else:
-        apply slowness 3 to player for 1 day
-        set {gun_scout.scope_1.%player%} to true
+    make player execute command "/scope"
 
 on rightclick holding a {@gun_sg550.item}:    # sg550
     cancel event
     make player execute command "/gun shoot sg550 %name of player%"
+on leftclick holding a {@gun_sg550.item}:
+    cancel event
+    make player execute command "/scope"
 
 on rightclick holding a {@gun_m249.item}:    # M249
     cancel event
@@ -847,6 +837,11 @@ on rightclick holding a {@gun_nightvision.item}:    # nightvision
     
 on death of player:
     loop all players:
+        if attacker is player:
+            if {team.%player%} is set:
+                if {team.%name of attacker%} is set:
+                    set the death message to ""
+                    send "%{team.%{team.%name of attacker%}%}%%name of attacker% &f&l>>> %{team.%{team.%player%}%}%%player%" to loop-players
         set {will_money.%loop-player%} to {@kill_money} + {money.%loop-player%}
         set {wil_money.%loop-player%} to {money.%loop-player%} - {@death_money}
         wait a tick
@@ -903,10 +898,10 @@ command /map [<text>] [<text>] [<text>] [<text>]:
                         if {allmaps::*} contains arg 4:
                             if arg 3 is "tt":
                                 set {spawn_tt.%arg 4%} to location of player
-                                send "&aSuccessfully added {@team.tt}Terrorists &a spawn!"
+                                send "&aSuccessfully added %{team.tt}%Terrorists &a spawn!"
                             if arg 3 is "ct":
                                 set {spawn_ct.%arg 4%} to location of player
-                                send "&aSuccessfully added {@team.ct}Counter-Terrorists &a spawn!"
+                                send "&aSuccessfully added %{team.ct}%Counter-Terrorists &a spawn!"
                         else:
                             send "&4There is no map &c%arg 4%&4!"
                 else:
@@ -971,12 +966,12 @@ command /bomb <text> [<text>] [<player>]:
                     make console execute command "/bomb plant a"
                 else:
                     if {bomb.bs.target} is set:
-                        send "{@team.tt}Bomb already planted at &6&l%{bomb.bs.target}%" to arg player
+                        send "%{team.tt}%Bomb already planted at &6&l%{bomb.bs.target}%" to arg player
                     else:
                         set {planting_location} to location of arg player
                         set {bomb.bs.target} to arg 2
                         set {to_explode} to 0
-                        send "{@team.tt}Planting..." to arg player
+                        send "%{team.tt}%Planting..." to arg player
                         set level progress of the arg player to 0.99
                         set the level of arg player to 0
                         loop 5 times:
@@ -984,9 +979,9 @@ command /bomb <text> [<text>] [<player>]:
                             wait 1 second
                         loop all players:
                             if {team.%loop-player%} is "tt":
-                                send "{@team.tt}Bomb Planted at &6&l%{bomb.bs.target}%!" to loop-players
+                                send "%{team.tt}%Bomb Planted at &6&l%{bomb.bs.target}%!" to loop-players
                             else:
-                                send "{@team.tt}Bomb Planted!" to loop-players
+                                send "%{team.tt}%Bomb Planted!" to loop-players
                             set level progress of the loop-player to 0
                         loop {@explode_seconds} times:
                             loop all players:
@@ -1021,7 +1016,7 @@ command /bomb <text> [<text>] [<player>]:
                     set {bomb.bs.do} to arg 2
                     if {bomb.bs.target} is set:
                         if {bomb.bs.do} is {bomb.bs.target}:
-                            send "{@team.ct}Unplanting..." to arg player
+                            send "%{team.ct}%Unplanting..." to arg player
                             set level progress of the arg player to 0.99
                             set the level of arg player to 0
                             loop 5 times:
@@ -1029,9 +1024,9 @@ command /bomb <text> [<text>] [<player>]:
                                 wait 1 second
                             set {bomb_unplanted.%{bomb.bs.target}%} to true
                         else:
-                            send "{@team.ct}Sorry, not this bombside." to arg player
+                            send "%{team.ct}%Sorry, not this bombside." to arg player
                     else:
-                        send "{@team.ct}Bomb is not planted!." to arg player
+                        send "%{team.ct}%Bomb is not planted!." to arg player
         if arg 1 is "reset":
             set {bomb_unplanted.%{bomb.bs.target}%} to false
             clear {bomb.bs.target}
@@ -1047,28 +1042,29 @@ command /team [<text>] [<text>] [<player>]:
                         if arg player is set:
                             loop all players:
                                 if loop-player is arg player:
+                                    wait 3 ticks
                                     make loop-player execute command "/team join %arg 2%"
                         else:
                             if arg 2 is "red" or "tt" or "terrorists":                                 #tt
                                 set {team.%player%} to "tt"
-                                set the player's tablist name to "{@team.tt}%name of player%"
+                                set the player's tablist name to "%{team.tt}%%name of player%"
                                 teleport player to {spawn_tt.%{map_%player%}%}
                                 loop all players:
                                     if {map_%loop-player%} is {map_%player%}:
-                                        send "&4&l%name of player%{@team.tt} joined Terrorists!" to loop-player
+                                        send "&4&l%name of player%%{team.tt}% joined Terrorists!" to loop-player
                             if arg 2 is "blue" or "ct" or "counterterrorists" or "counter-terrorists": #ct
                                 set {team.%player%} to "ct"
                                 teleport player to {spawn_ct.%{map_%player%}%}
-                                set the player's tablist name to "{@team.ct}%name of player%"
+                                set the player's tablist name to "%{team.ct}%%name of player%"
                                 loop all players:
                                     if {map_%loop-player%} is {map_%player%}:
-                                        send "&1&l%name of player%{@team.ct} joined Counter-Terrorists!" to loop-player
+                                        send "&1&l%name of player%%{team.ct}% joined Counter-Terrorists!" to loop-player
                             if arg 2 is "spectate" or "spectator": #spectator
                                 set {team.%player%} to "spectate"
                                 teleport player to {spawn_tt.%{map_%player%}%}
-                                set the player's tablist name to "{@team.spectate}%name of player%"
+                                set the player's tablist name to "%{team.spectate}%%name of player%"
                     else:
-                        show "s;1;i;%{gun_ak47.item}%;n;{@team.tt}Terrorists;l;{@team.tt}Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;{@team.ct}Counter-Terrorists;l;{@team.ct}Join ct team;c;team join ct %name of player%;s;3;i;stone;n;{@team.spectate}Spectators;l;{@team.spectate}Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
+                        show "s;1;i;%{gun_ak47.item}%;n;%{team.tt}%Terrorists;l;%{team.tt}%Join to tt team;c;team join tt %name of player%;s;2;i;%{gun_m4a1.item}%;n;%{team.ct}%Counter-Terrorists;l;%{team.ct}%Join ct team;c;team join ct %name of player%;s;3;i;stone;n;%{team.spectate}%Spectators;l;%{team.spectate}%Join spectators team;c;team join spectate %name of player%" with 1 rows named "Choose a team:" to player
                 else:
                     make player execute command "/map list"
             if arg 1 is "leave":
@@ -1076,11 +1072,11 @@ command /team [<text>] [<text>] [<player>]:
         else:
             loop all players:
                 if {team.%loop-player%} is "tt":
-                    send "{@team.tt}%loop-player%" to player
+                    send "%{team.tt}%%loop-player%" to player
                 if {team.%loop-player%} is "ct":
-                    send "{@team.ct}%loop-player%" to player
+                    send "%{team.ct}%%loop-player%" to player
                 if {team.%loop-player%} is "spectate":
-                    send "{@team.spectate}%loop-player%" to player
+                    send "%{team.spectate}%%loop-player%" to player
             
 command /gun [<text>] [<text>] [<player>]:    #gun choose %gun%; gun buy %gun%;
     trigger:
@@ -1157,9 +1153,9 @@ command /gun [<text>] [<text>] [<player>]:    #gun choose %gun%; gun buy %gun%;
             if arg 1 is "buy":
                 if arg 2 is not set:
                     if {team.%player%} is "tt":
-                        show "s;1;i;%{gun_glock.item}%;n;{@team.tt}Pistols;l;{@team.tt}Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;{@team.tt}Shotguns;l;{@team.tt}Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;{@team.tt}SMG;l;{@team.tt}Buy a SMG;c;gun buy smg %name of player%;s;4;i;iron hoe;n;{@team.tt}Rifles;l;{@team.tt}Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;{@team.tt}Machine Guns;l;{@team.tt}Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;{@team.tt}Equipment;l;{@team.tt}Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;{@team.tt}Primary Ammo;l;{@team.tt}Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;{@team.tt}Secondary Ammo;l;{@team.tt}Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
+                        show "s;1;i;%{gun_glock.item}%;n;%{team.tt}%Pistols;l;%{team.tt}%Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;%{team.tt}%Shotguns;l;%{team.tt}%Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;%{team.tt}%SMG;l;%{team.tt}%Buy a SMG;c;gun buy smg %name of player%;s;4;i;iron hoe;n;%{team.tt}%Rifles;l;%{team.tt}%Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;%{team.tt}%Machine Guns;l;%{team.tt}%Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;%{team.tt}%Equipment;l;%{team.tt}%Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;%{team.tt}%Primary Ammo;l;%{team.tt}%Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;%{team.tt}%Secondary Ammo;l;%{team.tt}%Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
                     if {team.%player%} is "ct":
-                        show "s;1;i;%{gun_usp.item}%;n;{@team.ct}Pistols;l;{@team.ct}Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;{@team.ct}Shotguns;l;{@team.ct}Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;{@team.ct}SMG;l;{@team.ct}Buy a SMG;c;gun buy smg %name of player%;s;4;i;wooden hoe;n;{@team.ct}Rifles;l;{@team.ct}Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;{@team.ct}Machine Guns;l;{@team.ct}Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;{@team.ct}Equipment;l;{@team.ct}Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;{@team.ct}Primary Ammo;l;{@team.ct}Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;{@team.ct}Secondary Ammo;l;{@team.ct}Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
+                        show "s;1;i;%{gun_usp.item}%;n;%{team.ct}%Pistols;l;%{team.ct}%Buy a gun;c;gun buy pistol %name of player%;s;2;i;%{gun_m3.item}%;n;%{team.ct}%Shotguns;l;%{team.ct}%Buy a shotgun;c;gun buy shotgun %name of player%;s;3;i;%{gun_mp5.item}%;n;%{team.ct}%SMG;l;%{team.ct}%Buy a SMG;c;gun buy smg %name of player%;s;4;i;wooden hoe;n;%{team.ct}%Rifles;l;%{team.ct}%Buy a Rifle;c;gun buy rifle %name of player%;s;5;i;diamond;n;%{team.ct}%Machine Guns;l;%{team.ct}%Buy a Machine Gun;c;gun buy mg %name of player%;s;6;i;gunpowder;n;%{team.ct}%Equipment;l;%{team.ct}%Buy a Equipment;c;gun buy eq %name of player%;s;8;i;flint;n;%{team.ct}%Primary Ammo;l;%{team.ct}%Buy an ammo;c;gun buy pammo %name of player%;s;9;i;263;n;%{team.ct}%Secondary Ammo;l;%{team.ct}%Buy an ammo;c;gun buy sammo %name of player%" with 1 rows named "Buy:" to player
                 else:
                     if arg-player is set:
                         if arg 2 is "menu":
@@ -1369,22 +1365,24 @@ command /gun [<text>] [<text>] [<player>]:    #gun choose %gun%; gun buy %gun%;
             if arg 1 is "shoot":
                 if arg 2 is set:
                     if arg player is set:
-                        if {canshooot.%player%} is true:
-                            set {gun.%player%} to arg 2 
-                            set {canshooot.%player%} to false
-                            set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
+                        if {canshooot.%arg player%} is true:
+                            set {gun.%arg player%} to arg 2 
+                            set {canshooot.%arg player%} to false
+                            set the name of the arg player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%arg player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
+                           # if player is not walking:
+                           #     push the arg player backwards at speed {gun_%arg 2%.recoil}
                             make arg player shoot an snowball with speed {gun_%arg 2%.speed}
-                            remove 1 from {gun_%arg 2%.ammo.%player%}
-                            if {gun_%arg 2%.ammo.%player%} is -1:
+                            remove 1 from {gun_%arg 2%.ammo.%arg player%}
+                            if {gun_%arg 2%.ammo.%arg player%} is -1:
                                 set the name of the player's tool to "&f&l-&9RELOADING&f&l-"
                                 wait 3 seconds
-                                set {gun_%arg 2%.ammo.%player%} to {gun_%arg 2%.clipammo}
-                                set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
+                                set {gun_%arg 2%.ammo.%arg player%} to {gun_%arg 2%.clipammo}
+                                set the name of the player's tool to "%{gun_%arg 2%.fullname}% &9%{gun_%arg 2%.ammo.%arg player%}%&f&l ¦¦ &9%{gun_%arg 2%.maxammo}%"
                                 set {canshooot.%player%} to true
-                                remove 1 from {gun_%arg 2%.ammo.%player%}
+                                remove 1 from {gun_%arg 2%.ammo.%arg player%}
                             else:
                                 wait {gun_%arg 2%.delay}
-                                set {canshooot.%player%} to true
+                                set {canshooot.%arg player%} to true
 command /money [<text>] [<player>] [<number>]:
     aliases: m
     trigger:
@@ -1450,14 +1448,16 @@ on command "/n":
         else:
             apply night vision to player for 1 day
             set {gun_nightvision.%player%} to true
-on command "/nn":
+on command "/scope":
     cancel event
-    set {ninja.%player%} to location of player
-    loop all players in radius 20 around player:
-        send "&c-&4&l-&0&lNINJA!!!&4&l-&c-" to loop-player
-        apply invisibility to player for 2 seconds
-        teleport player 2 blocks behind loop-player 
-        loop 30 times:
-            loop 10 times:
-                play 70 of effect "smoke" with data 0 at {ninja.%player%}
-            wait 0.1 seconds
+    if {gun.scope_1.%player%} is true:
+        if {gun.scope_2.%player%} is true:
+            remove slowness from player
+            set {gun.scope_1.%player%} to false
+            set {gun.scope_2.%player%} to false
+        else:
+            apply slowness 6 to player for 1 day
+            set {gun.scope_2.%player%} to true
+    else:
+        apply slowness 3 to player for 1 day
+        set {gun.scope_1.%player%} to true
